@@ -176,7 +176,7 @@ while (true)
                 {
                     using (StreamWriter writer = new StreamWriter(Save_Path, true))
                     {
-                        writer.WriteLine(Result);
+                        writer.WriteLine("\n" + Result);
                     }
                 }
             }
