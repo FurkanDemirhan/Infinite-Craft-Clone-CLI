@@ -4,6 +4,11 @@ A Basic Infinite Craft Clone Using Ollama and C#
 
 I made this clone using C# and OllamaSharp.
 
+## Hardware Requirements
+- 16 GB RAM
+- 11 GB Storage
+
+
 ## Software Requirements
 
 - **Ollama:** Make sure you have Ollama installed on your system to play this CLI game.
