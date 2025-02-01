@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "GBOo3EmNol0=",
+  "success": true,
+  "projectFilePath": "/home/furkan/RiderProjects/AI-Test/Infinite-Craft-Clone-CLI/Infinite-Craft-Clone-CLI.csproj",
+  "expectedPackageFiles": [
+    "/home/furkan/.nuget/packages/microsoft.bcl.asyncinterfaces/9.0.0/microsoft.bcl.asyncinterfaces.9.0.0.nupkg.sha512",
+    "/home/furkan/.nuget/packages/microsoft.extensions.ai.abstractions/9.1.0-preview.1.25064.3/microsoft.extensions.ai.abstractions.9.1.0-preview.1.25064.3.nupkg.sha512",
+    "/home/furkan/.nuget/packages/ollamasharp/5.0.4/ollamasharp.5.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
