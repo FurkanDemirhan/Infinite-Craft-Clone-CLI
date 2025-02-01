@@ -83,7 +83,7 @@ while (true)
     foreach (var line in Save)
     {
         item_count++;
-        Console.WriteLine(item_count.ToString()+".  " + line);
+        Console.WriteLine(item_count.ToString()+".  " + line.Trim());
     }
     Console.WriteLine("_____________________");
     
@@ -94,7 +94,7 @@ while (true)
 
     for (int i = 0; i < Save.Length; i++)
     {
-        string line = Save[i];
+        string line = Save[i].Trim();
         if (line == Object1)
         {
             Found_Object1 = true;
@@ -115,7 +115,7 @@ while (true)
 
         for (int i = 0; i < Save.Length; i++)
         {
-            string line = Save[i];
+            string line = Save[i].Trim();
             if (line == Object2)
             {
                 Found_Object2 = true;
@@ -163,26 +163,28 @@ while (true)
                 {
                     writer.WriteLine(Object1);
                     writer.WriteLine(Object2);
-                    writer.WriteLine(Result);
+                    writer.WriteLine(Result.Trim());
                 }
             }
 
-            Console.WriteLine(Result);
+            Console.WriteLine(Result.Trim());
 
             for (int i = 0; i < Save.Length; i++)
             {
                 string line = Save[i];
-                if (line != Result && i == Save.Length - 1)
+                if (line != Result.Trim() && i == Save.Length - 1)
                 {
                     using (StreamWriter writer = new StreamWriter(Save_Path, true))
                     {
-                        writer.WriteLine("\n" + Result);
+                        writer.Write("\n" + Result.Trim());
                     }
                 }
             }
         }
     }
 
+    
+    
     Console.WriteLine("Press any key to continue...");
     Console.ReadKey();
     Console.Clear();
