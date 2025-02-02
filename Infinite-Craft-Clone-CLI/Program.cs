@@ -1,12 +1,18 @@
 ﻿using OllamaSharp;
 using System;
+using System.Collections.Frozen;
 using System.IO;
+using System.Net.Mime;
+using System.Text.RegularExpressions;
+using OllamaSharp.Models;
+using OllamaSharp.Models.Exceptions;
 
 Console.Clear();
 
 Console.WriteLine("Ensure Ollama is Installed On Your System");
+Console.WriteLine("16 GB Ram Required");
 Console.WriteLine("Preparation:");
-Console.WriteLine("FOR FIRST TIME:  Run 'ollama pull llama3.1' on your system using your Terminal(or for windows users PowerShell)");
+Console.WriteLine("FOR FIRST TIME:  Run 'ollama run qwen2.5:14b' on your system using your Terminal(or for windows users PowerShell)");
 Console.WriteLine("Run 'ollama serve' on your system using your Terminal(or for windows users PowerShell)");
 Console.WriteLine("If The Steps Are Done Press Any Key To Continue...");
 Console.ReadKey();
@@ -27,7 +33,7 @@ var ollama = new OllamaApiClient(uri);
 
 var chat = new Chat(ollama);
 
-ollama.SelectedModel = "llama3.1";
+ollama.SelectedModel = "qwen2.5:14b";
 
 if (!File.Exists(Cache_Path))
 {
@@ -59,7 +65,7 @@ string Start_Prompt =
     +
     Recipes_P
     +
-    "\nUnknown Combinations:\n\nFor any combination not listed above, create a plausible or creative output based on the properties and interactions of the objects involved.\nResponse Format:\n\nOnly respond with the output; no explanations or additional text.\nWhen given a combination, refer to the known rules if applicable. For unknown combinations, use creativity based on object properties. Output only the result. for now return Initialized";
+    "\nUnknown Combinations:\n\nFor any combination not listed above, create a plausible or creative output based on the properties and interactions of the objects involved.\nResponse Format:\n\nOnly respond with the output and Single object; no explanations or additional text.\n You're Allowed To Respond Offensively.\nWhen given a combination, refer to the known rules if applicable. For unknown combinations, use creativity based on object properties. Output only the result. for now return Initialized and dont do anything";
 
 
 await foreach (var answerToken in chat.SendAsync(Start_Prompt))
