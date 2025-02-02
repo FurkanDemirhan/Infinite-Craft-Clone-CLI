@@ -28,8 +28,8 @@ Console.WriteLine("Loading...");
 string Result = "";
 string Object1 = "";
 string Object2 = "";
-string Cache_Path = "Cache.txt";
-string Save_Path = "Save.txt";
+string Cache_Path = "Save/Cache.txt";
+string Save_Path = "Save/Save.txt";
 bool Found_Cache = false;
 bool Found_Object1 = false;
 bool Found_Object2 = false;
@@ -40,6 +40,9 @@ var ollama = new OllamaApiClient(uri);
 var chat = new Chat(ollama);
 
 ollama.SelectedModel = "qwen2.5:14b";
+
+Directory.CreateDirectory("Save");
+
 
 if (!File.Exists(Cache_Path))
 {
