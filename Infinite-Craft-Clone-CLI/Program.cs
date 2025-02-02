@@ -17,7 +17,7 @@ Console.WriteLine("Ensure Ollama is Installed On Your System", Color.Red);
 Console.Write("FOR FIRST TIME:  Run '");
 Console.Write("ollama run qwen2.5:14b", Color.Yellow);
 Console.WriteLine("' on your system using your Terminal(or for windows users PowerShell)");
-Console.Write("FOR FIRST TIME:  Run '");
+Console.Write("Run '");
 Console.Write("ollama serve", Color.Yellow);
 Console.WriteLine("' on your system using your Terminal(or for windows users PowerShell)");
 Console.WriteLine("If The Following Steps Are Done Press Any Key To Continue...", Color.Green);
