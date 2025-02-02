@@ -1,21 +1,26 @@
 ﻿using OllamaSharp;
 using System;
+using System.Drawing;
 using System.Collections.Frozen;
 using System.IO;
 using System.Net.Mime;
 using System.Text.RegularExpressions;
 using OllamaSharp.Models;
 using OllamaSharp.Models.Exceptions;
+using Console = Colorful.Console;
 
 Console.Clear();
 Console.Title = "Infinite Craft Clone CLI";
-
-Console.WriteLine("Ensure Ollama is Installed On Your System");
-Console.WriteLine("16 GB Ram Required");
-Console.WriteLine("Preparation:");
-Console.WriteLine("FOR FIRST TIME:  Run 'ollama run qwen2.5:14b' on your system using your Terminal(or for windows users PowerShell)");
-Console.WriteLine("Run 'ollama serve' on your system using your Terminal(or for windows users PowerShell)");
-Console.WriteLine("If The Steps Are Done Press Any Key To Continue...");
+Console.WriteLine("16 GB Ram Required\n", Color.Red);
+Console.WriteLine("Preparation:", Color.Cyan);
+Console.WriteLine("Ensure Ollama is Installed On Your System", Color.Red);
+Console.Write("FOR FIRST TIME:  Run '");
+Console.Write("ollama run qwen2.5:14b", Color.Yellow);
+Console.WriteLine("' on your system using your Terminal(or for windows users PowerShell)");
+Console.Write("FOR FIRST TIME:  Run '");
+Console.Write("ollama serve", Color.Yellow);
+Console.WriteLine("' on your system using your Terminal(or for windows users PowerShell)");
+Console.WriteLine("If The Following Steps Are Done Press Any Key To Continue...", Color.Green);
 Console.ReadKey();
 Console.Clear();
 Console.WriteLine("Loading...");
