@@ -8,6 +8,7 @@ using OllamaSharp.Models;
 using OllamaSharp.Models.Exceptions;
 
 Console.Clear();
+Console.Title = "Infinite Craft Clone CLI";
 
 Console.WriteLine("Ensure Ollama is Installed On Your System");
 Console.WriteLine("16 GB Ram Required");
