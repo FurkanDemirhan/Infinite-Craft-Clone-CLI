@@ -77,9 +77,24 @@ string Start_Prompt =
     "\nUnknown Combinations:\n\nFor any combination not listed above, create a plausible or creative output based on the properties and interactions of the objects involved.\nResponse Format:\n\nOnly respond with the output and Single object; no explanations or additional text.\n You're Allowed To Respond Offensively.\nWhen given a combination, refer to the known rules if applicable. For unknown combinations, use creativity based on object properties. Output only the result. for now return Initialized and dont do anything";
 
 
-await foreach (var answerToken in chat.SendAsync(Start_Prompt))
+try
 {
-    Console.WriteLine(answerToken);
+    await foreach (var answerToken in chat.SendAsync(Start_Prompt))
+    {
+        Console.Write(answerToken);
+    }
+}
+catch (Exception)
+{
+    Console.Clear();
+    Console.Write("You Didn't Run '",Color.Red);
+    Console.Write("ollama serve", Color.Yellow);
+    Console.Write("' or '", Color.Red);
+    Console.Write("ollama run qwen2.5:14b",Color.Yellow);
+    Console.WriteLine("' (You Need to run this once per system)", Color.Red);
+    Console.WriteLine("Press any key to Exit...");
+    Console.ReadKey();
+    Environment.Exit(1);
 }
 
 while (true)
