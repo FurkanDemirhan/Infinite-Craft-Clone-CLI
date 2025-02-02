@@ -82,11 +82,17 @@ await foreach (var answerToken in chat.SendAsync(Start_Prompt))
 while (true)
 {
     Console.Clear();
-    Console.WriteLine("Made by Furkan Demirhan");
-    Console.WriteLine("Inspired by Infinite Craft");
-    Console.WriteLine("Original Game: Infinite Craft");
-    Console.WriteLine("Created by: Neal Agarwal");
-    Console.WriteLine("Play the original game at: https://neal.fun/infinite-craft/");
+    Console.WriteLine("______Credits______");
+    Console.WriteLine("Made by Furkan Demirhan", Color.Blue);
+    Console.Write("Github Page: ");
+    Console.WriteLine("https://github.com/FurkanDemirhan/InfiniteCraft", Color.Yellow);
+    Console.WriteLine("Inspired by Infinite Craft", Color.Magenta);
+    Console.WriteLine("Original Game: Infinite Craft", Color.Magenta);
+    Console.Write("Original Game Created by:" , Color.Magenta);
+    Console.WriteLine(" Neal Agarwal", Color.Blue);
+    Console.Write("Play the original game at: ", Color.Blue);
+    Console.WriteLine("https://neal.fun/infinite-craft/", Color.Yellow);
+    Console.WriteLine("___________________");
     Found_Object1 = false;
     Found_Object2 = false;
     Console.WriteLine("______Inventory______");
