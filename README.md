@@ -4,6 +4,9 @@ A Basic Infinite Craft Clone Using Ollama and C#
 
 I made this clone using C# and OllamaSharp.
 
+![GIF](recording.gif)
+
+
 ## Hardware Requirements
 - 16 GB RAM
 - 11 GB Storage
