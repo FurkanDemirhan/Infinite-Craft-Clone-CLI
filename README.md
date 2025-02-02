@@ -20,3 +20,5 @@ I made this clone using C# and OllamaSharp.
 awaescher - [OllamaSharp](https://github.com/awaescher/OllamaSharp)
 
 Neal Agarwal - [Original Game](https://neal.fun/infinite-craft/)
+
+tomakita - [Colorful.Console](https://github.com/tomakita/Colorful.Console)
